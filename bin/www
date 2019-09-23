@@ -81,7 +81,7 @@ function onListening() {
  * Create HTTP server.
  */
 
-port = normalizePort(process.env.PORT || '3000');
+port = normalizePort(process.env.PORT || '8080');
 app.set('port', port);
 server = http.createServer(app);
 
