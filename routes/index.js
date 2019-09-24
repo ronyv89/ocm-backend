@@ -1,11 +1,8 @@
 const express = require('express');
 
-const router = express.Router();
+const router = express.Router({ mergeParams: true });
+const authRouter = require('./auth');
 
-/* GET home page. */
-router.get('/', (req, res) => {
-  // res.json({ status: 'success' });
-  res.status(302).end()
-});
+router.use('/auth', authRouter);
 
 module.exports = router;
